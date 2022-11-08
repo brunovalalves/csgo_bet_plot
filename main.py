@@ -11,3 +11,5 @@ from gerenciador_grafico import GerenciadorGrafico
 gerenciador=GerenciadorGrafico([])
 gerenciador.desenhar_dispersao()
 gerenciador.desenhar_histograma()
+
+# Fim do método Main
