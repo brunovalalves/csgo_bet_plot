@@ -9,6 +9,9 @@
 
 from gerenciador_grafico import GerenciadorGrafico
 gerenciador=GerenciadorGrafico([])
+
+# Chamando métodos da classe GerenciadorGrafico
+
 gerenciador.desenhar_dispersao()
 gerenciador.desenhar_histograma()
 
