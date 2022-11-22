@@ -1,10 +1,11 @@
+import matplotlib.pyplot as plt
+import numpy as np
+
 class GerenciadorGrafico:
     def __init__(self, dados):
         self.dados = dados
     
     def desenhar_histograma(self):
-        import matplotlib.pyplot as plt
-        import numpy as np
         plt.style.use('_mpl-gallery')
 
         # make data:
@@ -13,13 +14,13 @@ class GerenciadorGrafico:
         y = np.arange(5)
 
         # plot
+        
         fig, ax = plt.subplots()
-        ax.bar(x, y, width=1, edgecolor="white", linewidth=0.7)
+        ax.hist(self.dados)
+        # ax.bar(x, y, width=1, edgecolor="white", linewidth=0.7)
         plt.show()
             
     def desenhar_dispersao(self):
-        import matplotlib.pyplot as plt
-        import numpy as np
 
         # make data: correlated + noise
         np.random.seed(1)
