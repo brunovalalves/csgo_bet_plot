@@ -18,7 +18,10 @@ dados=[
     (2357890, 'nkt-vs-aravt-iem-road-to-rio-2022-asia-open-qualifier-1', 1.48, 2.77, None),
     (2357823, 'b8-vs-777-elisa-invitational-fall-2022-contenders', 1.5, 2.7, None)
 ]
+
+
 gerenciador=GerenciadorGrafico(dados)
+gerenciador.desenhar_histograma()
 
 # select odd, count(*) from (
 # 	select id, odd_team2 as odd from matches
@@ -32,7 +35,7 @@ gerenciador=GerenciadorGrafico(dados)
 
 # Chamando métodos da classe GerenciadorGrafico
 
-# gerenciador.desenhar_dispersao()
-gerenciador.desenhar_histograma()
+# gerenciador.desenhar_dispersao(dados)
+# gerenciador.desenhar_histograma()
 
 # Fim do método Main

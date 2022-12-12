@@ -4,23 +4,30 @@ import numpy as np
 class GerenciadorGrafico:
     def __init__(self, dados):
         self.dados = dados
-    
+            
     def desenhar_histograma(self):
-        plt.style.use('_mpl-gallery')
+        # plt.style.use('_mpl-gallery')
 
         # make data:
-        np.random.seed(3)
-        x = np.arange(0,100,20)
-        y = np.arange(5)
+        times_1,times_2 = 0,0
+        for dado in self.dados:
+            if dado[4] == 1:
+                times_1 = times_1 + 1
+            elif dado[4] == 2:
+                times_2 = times_2 + 1            
+
+        np.random.seed(1)
+        x = [1,2]
+        y = [times_1,times_2]
 
         # plot
         
         fig, ax = plt.subplots()
-        ax.hist(self.dados)
-        # ax.bar(x, y, width=1, edgecolor="white", linewidth=0.7)
+        # ax.hist(self)#.dados)
+        ax.bar(x, y, width=1, edgecolor="white")
         plt.show()
             
-    def desenhar_dispersao(self):
+    def desenhar_dispersao(self,dados):
 
         # make data: correlated + noise
         np.random.seed(1)
