@@ -24,7 +24,8 @@ class GerenciadorGrafico:
         
         fig, ax = plt.subplots()
         # ax.hist(self)#.dados)
-        ax.bar(x, y, width=1, edgecolor="white")
+        bar = ax.bar(x, y, width=1, edgecolor="white")
+        ax.bar_label(bar)
         plt.show()
             
     def desenhar_dispersao(self,dados):
