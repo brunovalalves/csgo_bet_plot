@@ -17,7 +17,10 @@ cursor.execute('select * from public.matches')
 dados = cursor.fetchall()
 
 gerenciador=GerenciadorGrafico(dados)
-gerenciador.desenhar_histograma()
+# gerenciador.desenhar_histograma()
+gerenciador.desenhar_ganho_apostas()
+# gerenciador.desenhar_ganho_apostas_zebra()
+# gerenciador.desenhar_ganho_apostas_favorito()
 
 # select odd, count(*) from (
 # 	select id, odd_team2 as odd from matches
